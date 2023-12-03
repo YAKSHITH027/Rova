@@ -21,7 +21,7 @@ model Course{
   isPublished Boolean @default(false)
   categoryId String? @db.ObjectId
   category Category? @relation(fields: [categoryId], references: [id])
-  chapter Chapter[]
+  chapters Chapter[]
   attachments Attachment[]
   purchase Purchase[]
   createdAt DateTime @default(now())
