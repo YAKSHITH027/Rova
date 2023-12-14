@@ -50,7 +50,6 @@ const ChapterDescriptionForm = ({
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      console.log('values', values)
       await axios.patch(
         `/api/courses/${courseId}/chapters/${chapterId}`,
         values
@@ -100,7 +99,6 @@ const ChapterDescriptionForm = ({
               control={form.control}
               name='description'
               render={({ field }) => {
-                console.log('fillll', field)
                 return (
                   <FormItem>
                     <FormControl>
