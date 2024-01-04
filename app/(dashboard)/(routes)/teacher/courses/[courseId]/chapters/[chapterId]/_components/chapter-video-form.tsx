@@ -8,7 +8,6 @@ import MuxPlayer from '@mux/mux-player-react'
 import toast from 'react-hot-toast'
 import { useRouter } from 'next/navigation'
 import { Chapter, MuxData } from '@prisma/client'
-import Image from 'next/image'
 import { FileUpload } from '@/components/file-upload'
 
 interface ChapterVideoFormProps {
@@ -78,7 +77,7 @@ const ChapterVideoForm = ({
             }}
           />
           <div className='text-xs text-muted-foreground mt-4'>
-            Upload this chapter's video
+            Upload this chapter&apos;s video
           </div>
         </div>
       )}
