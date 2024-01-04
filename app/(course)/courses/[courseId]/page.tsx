@@ -1,5 +1,7 @@
 import { db } from '@/lib/db'
+import { Donegal_One } from 'next/font/google'
 import { redirect } from 'next/navigation'
+import { Controller } from 'react-hook-form'
 
 const CourseIdPage = async ({ params }: { params: { courseId: string } }) => {
   const course = await db.course.findUnique({
