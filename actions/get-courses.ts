@@ -56,7 +56,7 @@ export const getCourses = async ({
           }
           const progressPercentage = await getProgress(userId, course.id)
           return { ...course, progress: progressPercentage }
-        })
+        }),
       )
     return coursesWithProgress
   } catch (error) {

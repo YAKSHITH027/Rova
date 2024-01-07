@@ -14,7 +14,7 @@ const bannerVariants = cva(
     defaultVariants: {
       variant: 'warning',
     },
-  }
+  },
 )
 
 interface BannerProps extends VariantProps<typeof bannerVariants> {

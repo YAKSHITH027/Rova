@@ -39,7 +39,7 @@ export const VideoPlayer = ({
           `/api/courses/${courseId}/chapters/${chapterId}/progress`,
           {
             isCompleted: true,
-          }
+          },
         )
       }
       if (!nextChapterId) {

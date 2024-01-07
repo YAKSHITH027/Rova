@@ -32,7 +32,7 @@ const ChapterVideoForm = ({
     try {
       await axios.patch(
         `/api/courses/${courseId}/chapters/${chapterId}`,
-        values
+        values,
       )
       toast.success('Chapter updated')
       toggleEdit()

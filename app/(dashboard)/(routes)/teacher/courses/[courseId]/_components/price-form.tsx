@@ -69,7 +69,7 @@ const PriceForm = ({ initialData, courseId }: PriceFormProps) => {
         <p
           className={cn(
             'text-sm mt-2',
-            !initialData.price && 'text-slate-500 italic'
+            !initialData.price && 'text-slate-500 italic',
           )}
         >
           {(initialData.price && formatPrice(initialData.price)) ||

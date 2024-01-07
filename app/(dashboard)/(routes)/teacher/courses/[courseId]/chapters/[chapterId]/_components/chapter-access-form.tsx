@@ -53,7 +53,7 @@ const ChapterAccessForm = ({
       console.log('values', values)
       await axios.patch(
         `/api/courses/${courseId}/chapters/${chapterId}`,
-        values
+        values,
       )
       toast.success('Chapter updated')
       toggleEdit()
@@ -81,7 +81,7 @@ const ChapterAccessForm = ({
         <p
           className={cn(
             'text-sm mt-2',
-            !initialData.isFree && 'text-slate-500 italic'
+            !initialData.isFree && 'text-slate-500 italic',
           )}
         >
           {initialData.isFree ? (

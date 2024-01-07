@@ -125,7 +125,7 @@ const ChapterForm = ({ initialData, courseId }: ChapterFormProps) => {
         <div
           className={cn(
             'text-sm mt-2',
-            !initialData.chapters.length && 'text-slate-500 italic'
+            !initialData.chapters.length && 'text-slate-500 italic',
           )}
         >
           {!initialData.chapters.length && 'No chapters'}

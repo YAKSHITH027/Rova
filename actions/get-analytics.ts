@@ -35,7 +35,7 @@ export const getAnalytics = async (userId: string) => {
       ([courseTitle, total]) => ({
         name: courseTitle,
         total: total,
-      })
+      }),
     )
     const totalRevenue = data.reduce((acc, curr) => acc + curr.total, 0)
     const totalSales = purchases.length

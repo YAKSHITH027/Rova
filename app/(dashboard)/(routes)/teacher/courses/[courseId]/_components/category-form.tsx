@@ -56,7 +56,7 @@ const CategoryForm = ({
     }
   }
   const selectedOption = options.find(
-    (option) => option.value === initialData.categoryId
+    (option) => option.value === initialData.categoryId,
   )
 
   return (
@@ -78,7 +78,7 @@ const CategoryForm = ({
         <p
           className={cn(
             'text-sm mt-2',
-            !initialData.categoryId && 'text-slate-500 italic'
+            !initialData.categoryId && 'text-slate-500 italic',
           )}
         >
           {selectedOption?.label || 'No categoryId'}
@@ -96,7 +96,7 @@ const CategoryForm = ({
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Combobox options={...options} {...field} />
+                    <Combobox options={options} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

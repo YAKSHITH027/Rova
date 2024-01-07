@@ -24,7 +24,7 @@ export const SearchInput = () => {
           title: debouncedValue,
         },
       },
-      { skipEmptyString: true, skipNull: true }
+      { skipEmptyString: true, skipNull: true },
     )
     router.push(url)
   }, [debouncedValue, currentCategoryId, router, pathname])

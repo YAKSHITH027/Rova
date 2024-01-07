@@ -14,7 +14,7 @@ type CourseWithProgressWithCategory = Course & {
 }
 
 export const getDashboardCourses = async (
-  userId: string
+  userId: string,
 ): Promise<DashboardCourses> => {
   try {
     const purchasedCourses = await db.purchase.findMany({
@@ -36,7 +36,7 @@ export const getDashboardCourses = async (
     })
 
     const courses = purchasedCourses.map(
-      (purchase) => purchase.course
+      (purchase) => purchase.course,
     ) as CourseWithProgressWithCategory[]
 
     for (let course of courses) {
@@ -45,7 +45,7 @@ export const getDashboardCourses = async (
     }
     const completedCourses = courses.filter((course) => course.progress === 100)
     const courseInProgress = courses.filter(
-      (course) => (course.progress ?? 0) < 100
+      (course) => (course.progress ?? 0) < 100,
     )
     return {
       completedCourses,

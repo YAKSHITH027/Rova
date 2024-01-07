@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server'
 
 export async function PUT(
   req: Request,
-  { params }: { params: { courseId: string; chapterId: string } }
+  { params }: { params: { courseId: string; chapterId: string } },
 ) {
   try {
     const { userId } = auth()

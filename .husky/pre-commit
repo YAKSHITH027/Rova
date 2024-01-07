@@ -1,4 +1,10 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npx lint-staged
+echo "start here boooo"
+
+npm run format ||
+(
+ echo :'some shit here'
+ false
+)

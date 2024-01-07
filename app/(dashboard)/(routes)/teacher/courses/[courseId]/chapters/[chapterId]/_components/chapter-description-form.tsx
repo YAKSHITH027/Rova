@@ -52,7 +52,7 @@ const ChapterDescriptionForm = ({
     try {
       await axios.patch(
         `/api/courses/${courseId}/chapters/${chapterId}`,
-        values
+        values,
       )
       toast.success('Chapter updated')
       toggleEdit()
@@ -80,7 +80,7 @@ const ChapterDescriptionForm = ({
         <div
           className={cn(
             'text-sm mt-2',
-            !initialData.description && 'text-slate-500 italic'
+            !initialData.description && 'text-slate-500 italic',
           )}
         >
           {!initialData.description && 'No description'}

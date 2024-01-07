@@ -12,10 +12,12 @@ export async function POST(req: Request) {
     event = stripe.webhooks.constructEvent(
       body,
       signature,
-      process.env.STRIPE_WEBHOOK_SECRET!
+      process.env.STRIPE_WEBHOOK_SECRET!,
     )
   } catch (error: any) {
-    return new NextResponse(`Webhook Error : ${error.message}`, { status: 400 })
+    return new NextResponse(`Webhook Error : ${error.message}`, {
+      status: 400,
+    })
   }
 
   const session = event.data.object as Stripe.Checkout.Session
@@ -24,7 +26,9 @@ export async function POST(req: Request) {
 
   if (event.type === 'checkout.session.completed') {
     if (!userId || !courseId) {
-      return new NextResponse('Webhook Error:Missing metadata', { status: 400 })
+      return new NextResponse('Webhook Error:Missing metadata', {
+        status: 400,
+      })
     }
     await db.purchase.create({
       data: {
@@ -35,7 +39,7 @@ export async function POST(req: Request) {
   } else {
     return new NextResponse(
       `Webhook Error:Unhandled event type ${event.type}`,
-      { status: 200 }
+      { status: 200 },
     )
   }
   return new NextResponse(null, { status: 200 })
