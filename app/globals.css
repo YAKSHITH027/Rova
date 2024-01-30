@@ -89,3 +89,12 @@ canvas {
   z-index: 10000 !important;
   width: 100%;
 }
+
+.main3d {
+  height: 500vh;
+}
+.cube {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
