@@ -12,6 +12,7 @@ import {
 } from 'framer-motion'
 import { motion } from 'framer-motion-3d'
 import { useRouter } from 'next/navigation'
+import Check from './_components/check'
 
 export default function index() {
   const router = useRouter()
@@ -24,12 +25,13 @@ export default function index() {
   const smoothProgress = useSpring(progress, { damping: 30 })
 
   const handleClick = () => {
-    router.push('/change')
+    router.push('/dashboard')
   }
 
   return (
     <div ref={container} className='main3d'>
       <button onClick={handleClick}>signup</button>
+      <Check />
       <div className='h-[100vh] border border-solid border-blue-500 flex justify-center items-center'>
         <h1 className='text-blue-500 text-5xl'>Yakshith</h1>
       </div>
