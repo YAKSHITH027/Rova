@@ -90,11 +90,19 @@ canvas {
   width: 100%;
 }
 
-.main3d {
-  height: 500vh;
-}
 .cube {
-  position: sticky;
-  top: 0;
-  height: 100vh;
+  /* position: sticky;
+  top: 0; */
+  height: 100%;
+}
+.cube canvas {
+  /* border: 1px solid rgb(99, 207, 192); */
+  width: 100% !important;
+  height: 80vh !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .cube canvas {
+    height: 65vh !important;
+  }
 }
