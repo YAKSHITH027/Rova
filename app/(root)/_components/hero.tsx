@@ -107,19 +107,15 @@ const Hero = () => {
 export default Hero
 
 function Cube({ progress }: { progress: any }) {
-  const mesh = useRef(null)
+  const mesh = useRef<any>(null)
 
-  // useFrame((state, delta) => {
-  //  if(mesh.current){
-  //   if(mesh.current!.rotation){
-
-  //   }
-
-  //   mesh.current.rotation.x += delta * 0.1
-  //   mesh.current.rotation.y += delta * 0.005
-  //   mesh.current.rotation.z += delta * 0.05
-  //  }
-  // })
+  useFrame((state, delta) => {
+    if (mesh.current) {
+      mesh.current.rotation.x += delta * 0.1
+      mesh.current.rotation.y += delta * 0.005
+      mesh.current.rotation.z += delta * 0.05
+    }
+  })
 
   // const options = {
   //   damping: 20,
