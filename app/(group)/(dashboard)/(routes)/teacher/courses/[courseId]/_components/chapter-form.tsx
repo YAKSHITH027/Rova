@@ -17,9 +17,8 @@ import { Input } from '@/components/ui/input'
 import toast from 'react-hot-toast'
 import { useRouter } from 'next/navigation'
 import { cn } from '@/lib/utils'
-import { Textarea } from '@/components/ui/textarea'
 import { Chapter, Course } from '@prisma/client'
-import { ChaptersList } from '@/app/(dashboard)/_components/chapters-list'
+import { ChaptersList } from '@/app/(group)/(dashboard)/_components/chapters-list'
 
 interface ChapterFormProps {
   initialData: Course & { chapters: Chapter[] }
@@ -72,7 +71,7 @@ const ChapterForm = ({ initialData, courseId }: ChapterFormProps) => {
   }
 
   return (
-    <div className='relative mt-6 border bg-slate-100 rounded-md p-4'>
+    <div className='relative mt-6 border  rounded-md p-4'>
       {isUpdating && (
         <div className='absolute h-full w-full bg-slate-500/20 top-0 right-0 rounded-m flex items-center justify-center'>
           <Loader2 className='animate-spin h-6 w-6 text-sky-700' />
@@ -80,7 +79,7 @@ const ChapterForm = ({ initialData, courseId }: ChapterFormProps) => {
       )}
       <div className='font-medium flex items-center justify-between'>
         Course Chapters
-        <Button variant='ghost' onClick={toggleCreating}>
+        <Button variant='outline' onClick={toggleCreating}>
           {isCreating ? (
             <>Cancel</>
           ) : (

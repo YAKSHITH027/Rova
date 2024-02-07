@@ -12,7 +12,6 @@ interface SidebarItemProps {
 const SidebarItem = ({ icon: Icon, label, href }: SidebarItemProps) => {
   const pathname = usePathname()
   const router = useRouter()
-  console.log('pathname', pathname)
   const isActive =
     (pathname === '/dashboard' && href === '/dashboard') ||
     pathname === href ||
@@ -32,10 +31,15 @@ const SidebarItem = ({ icon: Icon, label, href }: SidebarItemProps) => {
           'text-sky-700 bg-sky-200/20 hover:bg-sky-200/20 hover:text-sky-700',
       )}
     >
-      <div className='flex items-center gap-x-2 py-4'>
+      <div
+        className={cn(
+          'flex items-center gap-x-2 py-4 text-[#F2F4F7]',
+          isActive && 'text-sky-700',
+        )}
+      >
         <Icon
           size={22}
-          className={cn('text-slate-500', isActive && 'text-sky-700')}
+          className={cn('text-[#F2F4F7]', isActive && 'text-sky-700')}
         />
         {label}
       </div>
