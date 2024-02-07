@@ -15,7 +15,6 @@ import { useRouter } from 'next/navigation'
 import Check from './check'
 import { Button } from '@/components/ui/button'
 import { auth } from '@clerk/nextjs'
-import { Mesh } from 'three'
 const Hero = () => {
   const router = useRouter()
   const container = useRef(null)
@@ -108,15 +107,19 @@ const Hero = () => {
 export default Hero
 
 function Cube({ progress }: { progress: any }) {
-  const mesh = useRef<Mesh>(null)
+  const mesh = useRef(null)
 
-  useFrame((state, delta) => {
-    if (mesh.current) {
-      mesh.current.rotation.x += delta * 0.005
-      mesh.current.rotation.y += delta * 0.1
-      mesh.current.rotation.z += delta * 0.08
-    }
-  })
+  // useFrame((state, delta) => {
+  //  if(mesh.current){
+  //   if(mesh.current!.rotation){
+
+  //   }
+
+  //   mesh.current.rotation.x += delta * 0.1
+  //   mesh.current.rotation.y += delta * 0.005
+  //   mesh.current.rotation.z += delta * 0.05
+  //  }
+  // })
 
   // const options = {
   //   damping: 20,
