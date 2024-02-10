@@ -10,10 +10,11 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Rova',
-  description: 'The best LMS Application',
+  description: 'Learn from courses or Post your courses',
   openGraph: {
-    images:
-      'https://rova-ykuv-b3rum02cg-yakshith027.vercel.app/_next/image?url=https%3A%2F%2Futfs.io%2Ff%2Febeafa62-6622-4676-8c89-7a8fe4f3065b-62jdjh.jpg&w=1920&q=75',
+    images: 'https://i.ibb.co/kGBxchs/Screenshot-154.png',
+    title: 'Rova',
+    description: 'Learn from courses or Post your courses',
   },
 }
 

@@ -8,9 +8,9 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import qs from 'query-string'
 
 export const SearchInput = () => {
-  const [value, setValue] = useState('')
-  const debouncedValue = useDebounce(value)
   const searchParams = useSearchParams()
+  const [value, setValue] = useState(searchParams.get('title') || '')
+  const debouncedValue = useDebounce(value)
   const router = useRouter()
   const pathname = usePathname()
   const currentCategoryId = searchParams.get('categoryId')
