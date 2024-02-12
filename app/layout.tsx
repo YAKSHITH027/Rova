@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: 'Rova',
   description: 'Learn from courses or Post your courses',
   openGraph: {
-    images: 'https://i.ibb.co/z5Pjxwf/Safeimagekit-resized-img.png',
+    images: 'https://i.ibb.co/PhNpQWV/Screenshot-156.png',
     title: 'Rova',
     description: 'Learn from courses or Post your courses',
   },

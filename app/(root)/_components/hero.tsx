@@ -63,7 +63,7 @@ const Hero = () => {
               Search
             </Button>
           </div>
-          <div className='w-[80%] md:w-[70%] lg:w-full flex gap-6 flex-col lg:flex-row m-auto'>
+          <div className='w-[80%] md:w-[70%] lg:w-full flex gap-6 flex-col lg:flex-row m-auto pb-7 lg:pb-0'>
             <div className='flex justify-evenly lg:justify-center items-center shadow-4xl py-6 px-4 rounded-lg'>
               <p className='text-4xl text-gray-300 '>1259</p>
               <div className='flex flex-col items-start justify-center ml-4 pl-[10px]'>
